@@ -1,0 +1,56 @@
+<div>
+    <h1>
+        <!-- Interpolation -->
+        Welcome to {{ title }}
+    </h1>
+    <!-- elvis operator -->
+    <span>{{ object?.title }} by {{ object?.author }} </span>
+
+    <br>
+    <!-- property binding [property] -->
+    <button [disabled]="btnStatus">My dynamic button</button>
+    <br>
+    <!-- event binding (event) -->
+    <button (click)="toggleStatus($event)">Toggle disabled</button>
+
+    <br>
+    <!-- pipes - https://github.com/danrevah/ngx-pipes#filterby -->
+    <p> My app name is : {{ title | uppercase }}</p>
+
+    <!-- directives d'attribut -->
+    <p [ngClass]="{'class1': btnStatus, 'class2': !btnStatus}"></p>
+    <!-- <p [ngClass]="getClasses()"></p> -->
+
+    <br>
+    <!-- directive de structure -->
+    <p *ngIf="btnStatus, else elseTemplate">NgIfText</p>
+    <p [hidden]="btnStatus">Hidden directive</p>
+
+    <!-- directive de structure syntaxe complète -->
+    <ng-template [ngIf]="btnStatus">
+        <p>NgIfText</p>
+    </ng-template>
+
+    <ng-template #elseTemplate>
+        <p>Else text</p>
+    </ng-template>
+
+    <!-- template variables -->
+    <input type="text" required #myInput>
+    {{ myInput.required }}
+
+    <br>
+    <ul>
+        <ng-container *ngFor="let p of products">
+            <li>
+                {{ p.name }}
+            </li>
+            <li>
+                {{ p.price }}
+            </li>
+            <li>----</li>
+        </ng-container>
+    </ul>
+
+
+</div>
