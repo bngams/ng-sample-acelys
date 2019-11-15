@@ -6,7 +6,7 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductDashboardComponent } from './components/product-dashboard/product-dashboard.component';
-import { MaterialModule } from 'src/app/material.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import { MaterialModule } from 'src/app/material.module';
   imports: [
     CommonModule,
     ProductRoutingModule,
-    MaterialModule
+    SharedModule
   ]
 })
 export class ProductModule { }

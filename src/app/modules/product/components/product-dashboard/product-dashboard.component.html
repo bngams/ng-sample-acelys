@@ -1,2 +1,3 @@
-<app-product-form></app-product-form>
+<app-product-form (submitProduct)="addProductToList($event)"></app-product-form>
+<h1 #mainTitle>Liste de produits</h1>
 <app-product-list></app-product-list>

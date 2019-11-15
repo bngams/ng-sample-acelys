@@ -1,9 +1,9 @@
-<form>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
     <mat-form-field>
-        <input matInput placeholder="Name" name="name">
+        <input matInput placeholder="Name" name="name" formControlName="name" #productName>
     </mat-form-field>
     <mat-form-field>
-        <input matInput placeholder="Price" name="price">
+        <input matInput placeholder="Price" name="price" formControlName="price">
     </mat-form-field>
-    <button type="button" mat-raised-button color="primary">Add</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!productForm.valid">Add</button>
 </form>
