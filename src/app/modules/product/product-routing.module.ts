@@ -5,6 +5,7 @@ import { ProductDashboardComponent } from './components/product-dashboard/produc
 
 const routes: Routes = [
   { path: '', component: ProductDashboardComponent }
+  //{ path: 'details/:id', component: ProductDetailsComponent }
 ];
 
 @NgModule({

@@ -25,7 +25,9 @@ export class ProductDashboardComponent implements OnInit {
 
   addProductToList(product: Product) {
     console.log(product);
-    this.productListComponent.products.push(product);
+    // this.productListComponent.products.push(product);
+    // add to behavioursubject datasource
+    this.productListComponent.addProductToDatasource(product);
   }
 
 }

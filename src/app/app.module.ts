@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { GetStartedComponent } from './components/get-started/get-started.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { LoginModule } from './modules/login/login.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SharedModule } from './modules/shared/shared.module';
   ],
   imports: [
     BrowserModule,
+    LoginModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule

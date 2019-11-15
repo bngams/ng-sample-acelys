@@ -5,6 +5,8 @@
 
     <span routerLink="/home" routerLinkActive="active" class="menu-link">Home</span>
     <span routerLink="/get-started" routerLinkActive="active" class="menu-link">Get Started</span>
-    <span routerLink="/products" routerLinkActive="active" class="menu-link">Products</span>
-    <span routerLink="/login" routerLinkActive="active" class="menu-link">Login</span>
+    <span *ngIf="authService.isLoggedIn" routerLink="/products" routerLinkActive="active"
+        class="menu-link">Products</span>
+    <span *ngIf="!authService.isLoggedIn" routerLink="/login" routerLinkActive="active" class="menu-link">Login</span>
+    <span *ngIf="authService.isLoggedIn" (click)="logout()">Logout</span>
 </mat-toolbar>
